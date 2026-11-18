@@ -1,6 +1,10 @@
+[![make.fun · token-radar-01](https://make.fun/badge/token-radar-01.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![rank](https://make.fun/badge/token-radar-01/giandisruw/token-radar-01-v3/rank.svg)](https://make.fun/bounty/token-radar-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![reward](https://make.fun/badge/token-radar-01/giandisruw/token-radar-01-v3/reward.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+
 # Launch Radar v3 — token-radar-01 improvement loop (built 2026-11-15)
 
-Build-only variant. NOT submitted, NOT uploaded to GitHub. Live entry stays v2 (`radar-3`).
+Submitted 2026-11-18 as v3 (replaces the live v2 entry). Re-run 18 Nov (RunCrate): beats v2 16/20, beats starter 16/20.
 
 ## What changed vs v2
 
