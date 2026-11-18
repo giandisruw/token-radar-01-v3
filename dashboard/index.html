@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Launch Radar — Token Launch Radar</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header>
+  <h1>Launch Radar</h1>
+  <p class="sub">Which pre-token protocol is worth farming next — ranked by implied value, with a costed plan for each one.</p>
+  <p class="meta" id="meta"></p>
+</header>
+
+<section class="panel" id="method">
+  <h2>How this board is built — read this first</h2>
+  <p><strong>Implied value = TVL &times; curve anchor &times; growth &times; maturity &times; breadth.</strong>
+  The anchor is not a flat number: it comes from a log-log comps curve fitted to the snapshot's own
+  tokenised peers, <span id="fitline"></span> A flat median multiple would price a $10M protocol and a
+  $10B protocol the same way; the peers say the multiple falls steeply with size, so the curve does the pricing.</p>
+  <p><strong>Tested blind.</strong> The model was frozen first, then scored on five 70/30 hold-out splits of the
+  tokenised peers (fixed seeds, the curve re-fitted on the 70% only, scored only on the 30% it never saw):
+  <span id="blindline"></span> The median margin is small, so this is evidence the curve does not overfit,
+  not proof it is dramatically better — the table below shows all five seeds, not a cherry-picked one.</p>
+  <p><strong>Costed farm plans.</strong> Every row's plan names what each step costs in network fees and how long it takes,
+  from a stated gas table per chain and a stated capital tier by TVL. The totals are the sums of the steps.
+  Gas figures are the model's own estimates, not live quotes — the snapshot carries no fee data.</p>
+  <p><strong>Coverage.</strong> <span id="coverline"></span></p>
+  <div class="duo">
+    <table class="mini" id="buckets"></table>
+    <table class="mini" id="blind"></table>
+  </div>
+</section>
+
+<section class="panel" id="controls">
+  <label>Search <input id="q" type="text" placeholder="protocol name or slug"></label>
+  <label>Category <select id="cat"><option value="">All categories</option></select></label>
+  <label>Chain <select id="chain"><option value="">All chains</option></select></label>
+  <label><input id="watchonly" type="checkbox"> Watchlist only</label>
+  <label>Sort by
+    <select id="sort">
+      <option value="implied">Implied value</option>
+      <option value="tvl">TVL</option>
+      <option value="growth">7-day growth</option>
+      <option value="age">Age (days)</option>
+      <option value="cost">Farm cost (low first)</option>
+      <option value="eff">Implied value per $1 farmed</option>
+    </select>
+  </label>
+  <span id="count"></span>
+</section>
+
+<section class="panel">
+  <table id="board">
+    <thead><tr>
+      <th>#</th><th>Protocol</th><th>Category</th><th>Chain</th>
+      <th class="num">TVL</th><th class="num">7d</th><th class="num">Age</th>
+      <th class="num">Anchor</th><th class="num">Implied value</th>
+      <th class="num">Farm cost</th><th class="num">Farm time</th>
+    </tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+  <p class="hint">Click a row for its detail view: model breakdown, category-median anchor, and the full costed farm plan.</p>
+</section>
+
+<section class="panel" id="detail"></section>
+
+<footer>
+  <p>Snapshot: DefiLlama protocols at or above $5M TVL, fetched once and frozen — every figure on this page is derived from it at run time.
+  A protocol is shown as pre-token when its record carries no token; that is what the record says, never proof it has none.
+  Tokenised protocols are not ranked here — they are the comps the curve is fitted to, listed in the method note above.</p>
+</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

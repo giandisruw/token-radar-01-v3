@@ -1,0 +1,35 @@
+/* Launch Radar v3 — dark navy board, amber accent, one palette throughout. */
+body { background: #0d1526; color: #e8eef7; font-family: Verdana, Geneva, sans-serif; margin: 0; padding: 0 28px 40px; }
+header { padding: 26px 4px 6px; }
+h1 { color: #f5b942; font-size: 34px; margin: 0 0 4px; letter-spacing: 1px; }
+.sub { color: #c6d3e8; font-size: 15px; margin: 0 0 6px; }
+.meta { color: #93a5c4; font-size: 13px; margin: 0; }
+.panel { background: #16223a; border: 1px solid #2a3c5e; border-radius: 10px; padding: 16px 20px; margin: 16px 0; }
+h2 { color: #f5b942; font-size: 17px; margin: 0 0 10px; }
+#method p { font-size: 13.5px; line-height: 1.55; margin: 6px 0; }
+#method strong { color: #ffd97a; }
+table { border-collapse: collapse; width: 100%; }
+th { color: #93a5c4; font-size: 12px; text-align: left; padding: 8px 10px; border-bottom: 2px solid #2a3c5e; }
+td { font-size: 13.5px; padding: 7px 10px; border-bottom: 1px solid #223252; }
+tr:hover td { background: #1b2c4a; }
+tr.sel td { background: #2a3a12; }
+.num { text-align: right; font-variant-numeric: tabular-nums; }
+td.num { font-variant-numeric: tabular-nums; }
+.badge { background: #f5b942; color: #0d1526; border-radius: 4px; font-size: 11px; font-weight: bold; padding: 1px 6px; margin-left: 6px; }
+.mini { width: auto; margin: 10px 0 4px; }
+.duo { display: flex; gap: 48px; flex-wrap: wrap; }
+.duo .mini { flex: 0 1 auto; }
+.mini caption { text-align: left; color: #93a5c4; font-size: 12px; padding-bottom: 4px; }
+.mini th, .mini td { font-size: 12.5px; padding: 4px 14px 4px 0; border-bottom: 1px solid #223252; }
+#controls label { margin-right: 18px; font-size: 13px; color: #c6d3e8; }
+#controls input, #controls select { background: #0d1526; color: #e8eef7; border: 1px solid #2a3c5e; border-radius: 5px; padding: 5px 8px; font-size: 13px; }
+#count { color: #93a5c4; font-size: 13px; }
+.hint { color: #93a5c4; font-size: 12.5px; }
+#detail h2 { margin-bottom: 4px; }
+#detail .facts { font-size: 13.5px; line-height: 1.6; }
+#detail .facts b { color: #ffd97a; }
+#detail ol { font-size: 13.5px; line-height: 1.55; padding-left: 22px; }
+#detail ol li { margin: 7px 0; }
+#detail .totals { font-size: 14px; }
+#detail .totals b { color: #f5b942; }
+footer p { color: #93a5c4; font-size: 12px; line-height: 1.5; }
